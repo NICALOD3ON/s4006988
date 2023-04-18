@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+    <title>A2 Icon Design</title>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+        
+        <style>
+            .row{
+                width:720px;
+                margin: 10px auto 10px auto ;
+            }
+            .image-container {
+                display: table-cell;
+                vertical-align: middle;
+                
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <!--div class="row" is a CSS styling element which dictates the layout of the icons to be in a row-->
+        <!--div class="image-container" allows computer and webpage to know where to keep the icon so that it is confined in a space-->
+        <!--"this" within the code dictates what source and image I want the icon to switch to and from-->
+        <div class="row">
+            <div class="image-container"><img id="img1" src="img/ghost.png" onmouseover="this.src='img/regret.png';" onmouseout="this.src='img/ghost.png';" height="230" width="230"/></div>
+            <div class="image-container"><img id="img2" src="img/falling.png" onmouseover="this.src='img/control.png';" onmouseout="this.src='img/falling.png';" height="230" width="230"/></div> 
+            <div class="image-container"><img id="img3" src="img/chase.png" onmouseover="this.src='img/critical.png';" onmouseout="this.src='img/chase.png';" height="230" width="230"/></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img id="img4" src="img/teeth.png" onmouseover="this.src='img/illness.png';" onmouseout="this.src='img/teeth.png';" height="230" width="230"/></div>
+            <div class="image-container"><img id="img5" src="img/paralysis.png" onmouseover="this.src='img/sleep.png';" onmouseout="this.src='img/paralysis.png';" height="230" width="230"/></div>
+            <div class="image-container"><img id="img6" src="img/bugs.png" onmouseover="this.src='img/negative.png';" onmouseout="this.src='img/bugs.png';" height="230" width="230"/></div>
+            </div>
+
+        <div class="row">
+            <div class="image-container"><img id="img7" src="img/drown.png" onmouseover="this.src='img/responsibility.png';" onmouseout="this.src='img/drown.png';" height="230" width="230"/></div>
+            <div class="image-container"><img id="img8" src="img/death.png" onmouseover="this.src='img/change.png';" onmouseout="this.src='img/death.png';" height="230" width="230"/></div>
+            <div class="image-container"><img id="img9" src="img/clown.png" onmouseover="this.src='img/mask.png';" onmouseout="this.src='img/clown.png';" height="230" width="230"/></div>
+        </div>
+    
+        <!--var allows me to create variables for each sound -->
+        <!--window.onload = function dicates the fuction of certain interactions such as mouseover to play a sound-->
+        <script>
+            var sound1 = new buzz.sound("sound/ghostwoo.mp3");
+            var sound2 = new buzz.sound("sound/fall.mp3");
+            var sound3 = new buzz.sound("sound/chase.mp3");
+            var sound4 = new buzz.sound("sound/teeth.mp3");
+            var sound5 = new buzz.sound("sound/paralysis.mp3");
+            var sound6 = new buzz.sound("sound/bugs.mp3");
+            var sound7 = new buzz.sound("sound/drowning.mp3");
+            var sound8 = new buzz.sound("sound/graveyard.mp3");
+            var sound9 = new buzz.sound("sound/laughing.mp3");
+     
+            window.onload = function() {
+                document.getElementById('img1').addEventListener('mouseover', function () {sound1.play(); });  
+                document.getElementById('img2').addEventListener('mouseover', function () {sound2.play(); });
+                document.getElementById('img3').addEventListener('mouseover', function () {sound3.play(); });
+                document.getElementById('img4').addEventListener('mouseover', function () {sound4.play(); });
+                document.getElementById('img5').addEventListener('mouseover', function () {sound5.play(); }); 
+                document.getElementById('img6').addEventListener('mouseover', function () {sound6.play(); }); 
+                document.getElementById('img7').addEventListener('mouseover', function () {sound7.play(); }); 
+                document.getElementById('img8').addEventListener('mouseover', function () {sound8.play(); }); 
+                document.getElementById('img9').addEventListener('mouseover', function () {sound9.play(); });
+            } 
+            
+        </script>  
+       
+        
+    </body>
+    
+</html>
+
